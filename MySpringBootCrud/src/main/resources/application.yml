@@ -6,56 +6,8 @@ spring:
     mongodb:
      uri: mongodb://localhost:27017/crud-service
      #uri: mongodb://localhost:27017/merchant
-     #uri: mongodb://dev_user:t2d3f%40ult@nonprod-mongo22-link.t2systems.com:27017/test_merchant_service
+    
   jackson:
     default-property-inclusion: NON_NULL
     serialization:
       write-dates-as-timestamps: false
-#  cloud:
-#    stream:
-#      bindings:
-#        outputChannelMerchantTerminal:
-#           destination: terminal_updates
-#           content-type: application/json 
-#        pointOfSaleInputChannel:
-#          destination: pos_terminal_assignments
-#          content-type: application/json
-#          group: merchant-services
-#        auditOutputChannel:
-#          destination: audit_auditmessage
-#          content-type: application/json
-#      kafka:
-#        binder:
-#          brokers: localhost:9092
-#          zkNodes: localhost:2181
-#          
-#hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 10000
-#
-#swagger:
-#  scan-package: com.t2systems.merchant.controllers
-#  title: merchant-service
-#  description: t2systems-merchant-service REST API for configuring merchant accounts and terminals
-#  version: 1
-#  maintainer: Vlad
-#  maintainer-email: vladimirb@t2systems.com
-#  oauth2:
-#    client-id: swagger
-#    client-secret: swagger-secret
-#    scope: microservice user device
-#security:
-#   oauth2:
-#     # Please set these up on mitreid-openid-connect
-#     client:
-#       client-id: devs-testing
-#       client-secret: devs-secret
-#       access-token-uri: https://mitreid.dev.link.t2systems.com/token
-#       user-authorization-uri: https://mitreid.dev.link.t2systems.com/authorize
-#       # This is custom scope for microservice to microservice communication and need to be create on mitreid-openid-connect
-#       scope: microservice
-#     resource:
-#       # We are currently not using this userInfoUri but it is left here for future reference
-#       # userInfoUri: http://localhost:8777/t2systems-openid-connect/userinfo
-#       jwk:
-#         # Tells the JWT framework to fetch the public key from the authorization server during startup
-#         # Note: The authorization server needs to be running...
-#         key-set-uri: https://mitreid.dev.link.t2systems.com/jwk
